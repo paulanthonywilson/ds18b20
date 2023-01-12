@@ -30,7 +30,7 @@ defmodule Mix.Tasks.CreateFakeDs18b20 do
 
     dir
     |> Path.join(".gitignore")
-    |> File.write!("w1_slave")
+    |> File.write!("w1_slave\n")
 
     dir
     |> Path.join("w1_slave")
