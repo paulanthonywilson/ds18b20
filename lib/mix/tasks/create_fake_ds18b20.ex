@@ -22,7 +22,9 @@ defmodule Mix.Tasks.CreateFakeDs18b20 do
 
   def run(_args) do
     base = TemperatureServer.devices_base()
-    dir = Path.join(base, "28-device")
+    dir = base |> Path.join("28-device") |> Path.expand()
+
+    Mix.shell().info("Creating fake ds18b20 file under #{dir}")
 
     File.mkdir_p!(dir)
 
